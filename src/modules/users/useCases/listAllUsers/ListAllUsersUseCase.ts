@@ -10,6 +10,18 @@ class ListAllUsersUseCase {
 
   execute({ user_id }: IRequest): User[] {
     // Complete aqui
+    console.log("UserID", user_id);
+    
+    const caller = this.usersRepository.findById(user_id)
+    const adminPerm = caller.admin
+
+    if (!adminPerm) {
+      throw new Error("You must be an Admin to use this route!")
+    }
+
+    const users = this.usersRepository.list()
+
+    return users
   }
 }
 
