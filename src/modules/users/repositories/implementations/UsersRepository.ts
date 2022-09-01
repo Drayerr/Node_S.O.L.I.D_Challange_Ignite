@@ -50,6 +50,7 @@ class UsersRepository implements IUsersRepository {
   turnAdmin(recivedUser: User): User {
     // Complete aqui
     const updatedUser = {
+      id: recivedUser.id,
       name: recivedUser.name,
       email: recivedUser.email,
       created_at: recivedUser.created_at,

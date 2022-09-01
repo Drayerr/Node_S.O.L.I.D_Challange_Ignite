@@ -10,9 +10,13 @@ class ListAllUsersUseCase {
 
   execute({ user_id }: IRequest): User[] {
     // Complete aqui
-    console.log("UserID", user_id);
     
     const caller = this.usersRepository.findById(user_id)
+
+    // if(!caller) {
+    //   throw new Error("User ID not exists!")
+    // }
+    
     const adminPerm = caller.admin
 
     if (!adminPerm) {
