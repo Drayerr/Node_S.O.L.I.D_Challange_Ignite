@@ -4,6 +4,12 @@
     "node": true,
     "jest": true
   },
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    }
+  ],
   "extends": [
     "airbnb-base",
     "plugin:@typescript-eslint/recommended",
