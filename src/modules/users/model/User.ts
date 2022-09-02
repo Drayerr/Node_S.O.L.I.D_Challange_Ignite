@@ -3,8 +3,8 @@ import { v4 as uuidV4 } from "uuid";
 class User {
   // Complete aqui
   id?: string;
-  admin: boolean;
   name: string;
+  admin: boolean;
   email: string;
   created_at: Date;
   updated_at: Date;

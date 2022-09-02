@@ -1,6 +1,7 @@
 import { User } from "../../model/User";
 import { IUsersRepository, ICreateUserDTO } from "../IUsersRepository";
 
+
 class UsersRepository implements IUsersRepository {
   private users: User[];
 
