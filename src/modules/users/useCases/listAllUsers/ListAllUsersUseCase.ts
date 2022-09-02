@@ -1,3 +1,4 @@
+import AppError from "../../../../errors/AppError";
 import { User } from "../../model/User";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 
@@ -12,15 +13,17 @@ class ListAllUsersUseCase {
     // Complete aqui
     
     const caller = this.usersRepository.findById(user_id)
+    
 
-    // if(!caller) {
-    //   throw new Error("User ID not exists!")
-    // }
+    if(!caller) {
+
+      throw new AppError("User ID not exists!")
+    }
     
     const adminPerm = caller.admin
 
     if (!adminPerm) {
-      throw new Error("You must be an Admin to use this route!")
+      throw new AppError("You must be an Admin to use this route!", 401)
     }
 
     const users = this.usersRepository.list()

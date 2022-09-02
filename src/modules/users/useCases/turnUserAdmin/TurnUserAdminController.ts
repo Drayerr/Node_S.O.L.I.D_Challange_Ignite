@@ -9,7 +9,7 @@ class TurnUserAdminController {
     // Complete aqui
     const { user_id } = request.params
 
-    const updatedUser = this.turnUserAdminUseCase.execute({user_id})
+    const updatedUser = this.turnUserAdminUseCase.execute({ user_id })
 
     return response.status(201).json(updatedUser)
   }
