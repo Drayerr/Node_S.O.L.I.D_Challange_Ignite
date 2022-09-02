@@ -3,14 +3,11 @@
 
 ## Application Routes:
 
-POST /users
-
-PATCH /users/:user_id/admin
-
-GET /users/:user_id
-
-GET /users
-
+POST /users <br>
+PATCH /users/:user_id/admin <br>
+GET /users/:user_id <br>
+GET /users <br>
+Documentation: localhost:3333/api-docs/
 
 ## Commands:
 
