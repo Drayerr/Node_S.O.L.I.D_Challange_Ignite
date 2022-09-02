@@ -14,8 +14,8 @@ GET /users
 
 ## Commands:
 
-`yarn` or `npm i` - Download dependencies.
-`yarn dev` or `npm run dev` - Run application.
+`yarn` or `npm i` - Download dependencies. <br>
+`yarn dev` or `npm run dev` - Run application. <br>
 `yarn test` or  `npm run test` - Run test configured by jest.
 
 ## Details:
